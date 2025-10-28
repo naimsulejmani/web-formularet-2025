@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<form action="/users/register" method="post" th:object="${user}">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" th:field="*{name}" placeholder="Enter your name!?"
+               autofocus>
+    </div>
+
+    <div>
+        <label for="surname">Surname</label>
+        <input type="text" th:field="*{surname}" placeholder="Enter your surname!?">
+    </div>
+
+    <div>
+        <label for="age">Age</label>
+        <input type="number" th:field="*{age}" min="18" max="120" step="1">
+    </div>
+
+    <div>
+        <label for="email">Email</label>
+        <input type="email" th:field="*{email}" placeholder="Enter your email!?">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" th:field="*{password}" placeholder="Enter your password!?">
+    </div>
+
+    <div>
+        <button type="submit">Save</button>
+        <button type="reset">Reset</button>
+    </div>
+
+</form>
 </body>
 </html>

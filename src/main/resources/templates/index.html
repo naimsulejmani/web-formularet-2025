@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<form action="/register" method="post">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name!?"
+        autofocus>
+    </div>
+
+    <div>
+        <label for="surname">Surname</label>
+        <input type="text" id="surname" name="surname" placeholder="Enter your surname!?">
+    </div>
+
+    <div>
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="18" max="120" step="1">
+    </div>
+
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email!?">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password!?">
+    </div>
+
+    <div>
+        <button type="submit">Save</button>
+        <button type="reset">Reset</button>
+    </div>
+
+</form>
+
 </body>
 </html>
